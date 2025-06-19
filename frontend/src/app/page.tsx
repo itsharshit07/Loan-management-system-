@@ -1,22 +1,23 @@
 "use client";
-import { useState } from 'react';
-import Image from 'next/image';
-import { BotIcon } from 'lucide-react';
-import { Typewriter } from 'react-simple-typewriter';
-import { useRouter } from 'next/navigation'; // 👈 Import useRouter
+import { useState } from "react";
+import Image from "next/image";
+import { BotIcon } from "lucide-react";
+import { Typewriter } from "react-simple-typewriter";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
-  const [query, setQuery] = useState('');
-  const router = useRouter(); // 👈 Create a router instance
+  const [query, setQuery] = useState("");
+  const router = useRouter();
 
   const handleLoginClick = () => {
-    router.push('/login'); // 👈 Navigate to the login page
+    router.push("/login");
   };
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
       {/* Navbar */}
       <nav className="flex justify-between items-center px-6 py-4 shadow-md">
+        {/* Left - Logo and Website Name */}
         <div className="flex items-center space-x-2">
           <Image src="/logo.png" alt="LoanSaathi Logo" width={50} height={50} />
           <h1 className="text-xl font-bold">
@@ -24,26 +25,30 @@ export default function Home() {
             <span className="text-green-600">Saathi</span>
           </h1>
         </div>
-        <div className="space-x-4">
+
+        {/* Center - Navigation Links */}
+        <div className="flex space-x-6">
           <a href="#home" className="hover:underline">Home</a>
           <a href="#dashboard" className="hover:underline">Dashboard</a>
           <a href="#blogs" className="hover:underline">Blogs</a>
-          <button
-            onClick={handleLoginClick} // 👈 Add onClick handler
-            className="px-4 py-2 rounded-md bg-green-600 text-white hover:bg-green-700"
-          >
-            Login / Signup
-          </button>
         </div>
+
+        {/* Right - Login / Signup Button */}
+        <button
+          onClick={handleLoginClick}
+          className="px-4 py-2 rounded-md bg-green-600 text-white hover:bg-green-700"
+        >
+          Login / Signup
+        </button>
       </nav>
 
       {/* Hero Section */}
       <section className="text-center py-20 px-4 bg-gradient-to-br from-white to-gray-100">
         <h2 className="text-4xl sm:text-5xl font-extrabold mb-4">
-          Welcome to{' '}
+          Welcome to{" "}
           <span className="text-green-600">
             <Typewriter
-              words={['Loanसाथी', 'LoanSaathi']}
+              words={["Loanसाथी", "LoanSaathi"]}
               loop={true}
               cursor
               cursorStyle="_"
@@ -79,7 +84,13 @@ export default function Home() {
               className="flex-1 outline-none bg-transparent"
             />
             <button className="text-green-600 hover:text-green-800">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </button>
