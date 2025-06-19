@@ -1,2 +1,2 @@
 # Loan-management-system
-  SQL based Loan management system 
+  MySQL based Loan management system 
