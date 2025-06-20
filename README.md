@@ -13,6 +13,6 @@
 
 This project is intended solely for **educational purposes**.
 
-All source code, model files, and assets are provided _as-is_ without any warranties or guarantees of functionality, accuracy, or safety in real-world applications.
+All source code, and assets are provided _as-is_ without any warranties or guarantees of functionality, accuracy, or safety in real-world applications.
 
 You are free to explore and learn from this project, but **any external, commercial, or production use is strictly prohibited**
